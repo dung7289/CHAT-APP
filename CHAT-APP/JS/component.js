@@ -50,5 +50,23 @@ component.loginPage=`<div class="login-container">
 </form>
 </div>`
 component.chatPage=`<div class="chat-container">
-<h3>Wellcome to Chat-app </h3>
+<div class="header">
+    MindX Chat
+</div>
+<div class="main">
+    <div class="conversation-detail">
+        <div class="conversation-title"> First conversation</div>
+        <div class="list-message">
+            
+        </div>
+        <form id="send-message-form"> 
+            <div class="input-wrapper">
+                <input type="text" placeholder=" Type a message" name="message"></input>
+                <button type="submit">
+                    <i class="fa fa-send-o" style="font-size:30px;color:blue"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
 </div>`

@@ -31,3 +31,6 @@
     display: flex;
     justify-content: space-between;
 }
+.name-wrapper .input-wrapper{
+    width: 48%;
+}

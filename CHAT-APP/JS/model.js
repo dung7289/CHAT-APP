@@ -17,20 +17,20 @@ model.register= async (data)=>{ // khai báo sử dụng đồng bộ async
     }
     
 }
-model.login = async (data)=>{
+model.login = (data)=>{
     try{
-        const response = await firebase.auth().signInWithEmailAndPassword(data.email, data.password)
+        response = firebase.auth().signInWithEmailAndPassword(data.email, data.password)
         console.log(response)
-        if(response.user.emailVerified===false){
-            alert('Please verify by email to complete sign up')
-        } else{
-            //alert(' Wellcome to Chat app')
-            model.currentUser={
-                email: response.user.email,
-                displayName:response.user.displayName
-            }
-            view.setActiveScreen('chatPage')
-        }
+        // if(response.user.emailVerified===false){
+        //     alert('Please verify by email to complete sign up')
+        // } else{
+        //     //alert(' Wellcome to Chat app')
+        //     model.currentUser={
+        //         email: response.user.email,
+        //         displayName:response.user.displayName
+        //     }
+        //     view.setActiveScreen('chatPage')
+        // }
     }catch (err){
         console.log(err)
         alert(err.message)
